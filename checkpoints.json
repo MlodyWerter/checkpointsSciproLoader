@@ -1,0 +1,34 @@
+{
+  "checkpointy": [
+    {
+      "kod": "TYCOON-04",
+      "nazwa": "Tycoon — Etap 4: Sklep i waluta",
+      "skrypty": [
+        {
+          "nazwa": "EkonomiaServer",
+          "klasa": "Script",
+          "rodzic": "ServerScriptService",
+          "source": "-- Przykładowy skrypt serwera: zarządzanie walutą gracza\nlocal Players = game:GetService(\"Players\")\n\nPlayers.PlayerAdded:Connect(function(gracz)\n\tlocal waluta = Instance.new(\"IntValue\")\n\twaluta.Name = \"Monety\"\n\twaluta.Value = 100\n\twaluta.Parent = gracz\nend)\n"
+        },
+        {
+          "nazwa": "InterfejsSklepu",
+          "klasa": "LocalScript",
+          "rodzic": "StarterPlayer/StarterPlayerScripts",
+          "source": "-- Przykładowy LocalScript: odczyt stanu monet gracza\nlocal Players = game:GetService(\"Players\")\nlocal gracz = Players.LocalPlayer\n\nlocal waluta = gracz:WaitForChild(\"Monety\")\nprint(\"Stan monet: \" .. waluta.Value)\n"
+        },
+        {
+          "nazwa": "ModulSklepu",
+          "klasa": "ModuleScript",
+          "rodzic": "ReplicatedStorage/Moduly",
+          "source": "-- Przykładowy moduł: definicje przedmiotów w sklepie\nlocal ModulSklepu = {}\n\nModulSklepu.Przedmioty = {\n\t{ nazwa = \"Generator x2\", cena = 250 },\n\t{ nazwa = \"Sejf\", cena = 500 },\n}\n\nreturn ModulSklepu\n"
+        }
+      ],
+      "assety": [
+        {
+          "assetId": 123456789,
+          "rodzic": "Workspace"
+        }
+      ]
+    }
+  ]
+}
