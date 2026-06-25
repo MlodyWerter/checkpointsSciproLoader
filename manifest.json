@@ -1,0 +1,20 @@
+{
+  "kursy": [
+    {
+      "nazwa": "Tycoon",
+      "zajecia": [
+        { "numer": 1, "kod": "TYCOON-01", "assetId": null },
+        { "numer": 2, "kod": "TYCOON-02", "assetId": null },
+        { "numer": 3, "kod": "TYCOON-03", "assetId": null },
+        { "numer": 4, "kod": "TYCOON-04", "assetId": null }
+      ]
+    },
+    {
+      "nazwa": "Symulator",
+      "zajecia": [
+        { "numer": 1, "kod": "SYMULATOR-01", "assetId": null },
+        { "numer": 2, "kod": "SYMULATOR-02", "assetId": null }
+      ]
+    }
+  ]
+}
